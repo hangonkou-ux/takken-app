@@ -13,7 +13,11 @@ if 'q_index' not in st.session_state:
 row = df.iloc[st.session_state.q_index]
 
 # ヘッダー表示
-st.title("宅建 過去問カード（平成17年〜令和6年）")
+st.markdown(
+    "<h3 style='font-size:22px;'>宅建 過去問カード（平成17年〜令和6年）</h3>",
+    unsafe_allow_html=True
+)
+
 st.markdown(f"#### {row['年度']} 第{row['問題番号']}問")
 st.write(row['問題文'])
 
