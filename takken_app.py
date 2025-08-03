@@ -30,4 +30,4 @@ if st.button("正解を見る"):
 # 次の問題へ
 if st.button("次の問題へ"):
     st.session_state.q_index = (st.session_state.q_index + 1) % len(df)
-    st.experimental_rerun()
+    st.rerun()
