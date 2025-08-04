@@ -20,7 +20,7 @@ selected_number = st.sidebar.selectbox("問題番号を選択", numbers)
 row = df[(df["年度"] == selected_year) & (df["問題番号"] == selected_number)]
 
 if not row.empty:
-    st.markdown(f"### 【{row.iloc[0]['年度']}年・問{row.iloc[0]['問題番号']}】")
+    st.markdown(f"### 【{row.iloc[0]['年度']}・問{row.iloc[0]['問題番号']}】")
     st.write(row.iloc[0]["問題文"])
 
     options = [row.iloc[0]["選択肢1"], row.iloc[0]["選択肢2"], row.iloc[0]["選択肢3"], row.iloc[0]["選択肢4"]]
